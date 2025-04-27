@@ -1,10 +1,9 @@
-import { playerOne, playerTwo } from "@/app/lib/players";
+import { theHobbit } from "@/app/lib/books";
 
 export default function Home() {
   return (
     <div className="flex justify-center items-center h-screen flex-col gap-2">
-      <p>{playerOne.sayName()}</p>
-      <p>{playerTwo.sayName()}</p>
+      <p>{theHobbit.info()}</p>
     </div>
   );
 }
