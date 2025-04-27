@@ -1,20 +1,16 @@
-// example one
-const playerOneName = "tim";
-const playerTwoName = "jenn";
-const playerOneMarker = "X";
-const playerTwoMarker = "O";
+class Player {
+  name: string;
+  marker: string;
 
-// example two
-export const playerOne = {
-  name: "tim",
-  marker: "X",
-};
+  constructor(name: string, marker: string) {
+    this.name = name;
+    this.marker = marker;
+  }
 
-export const playerTwo = {
-  name: "jenn",
-  marker: "O",
-};
-
-export function getName(player: { name: string; marker: string }) {
-  return player.name;
+  sayName(): string {
+    return `Hello, my name is ${this.name}.`;
+  }
 }
+
+export const playerOne = new Player("steve", "X");
+export const playerTwo = new Player("also steve", "O");
